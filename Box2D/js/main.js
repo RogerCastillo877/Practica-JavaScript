@@ -35,6 +35,7 @@ function createWorld() {
     var gravity = new b2Vec2(0, 300);
     var doSleep = true;
     world = new b2World(worldAABB, gravity, doSleep);
+    createGround(world);
     return world;
 }
 
@@ -45,7 +46,7 @@ function createGround(world) {
     //Se define el cuerpo
     var groundBd = new b2BodyDef();
     groundBd.AddShape(groundSd);
-    // Mostrar que además de piso puede ser un obstaculo    
+    //mostrar que ademas de piso puede ser un obstaculo    
     groundBd.position.Set(400, 470);
 
     //Se genera el cuerpo en el mundo de box2d    
@@ -121,8 +122,9 @@ function createJoint(){
 }
 
 function generarMundo() {
+
     createBall(world, 300, 120);
-    createBox(world, 400, 50, 10, 20);
+    createBox(world, 300, 50, 10, 20);
     createBox(world, 500, 50, 30, 5);
 
     createJoint();
