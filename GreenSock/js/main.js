@@ -62,7 +62,7 @@ function animar(){
     var img2 = document.getElementById("img2");
     var img3 = document.getElementById("img3");
 
-    animacion = new TimelineMax({delay: 2, pause: false, repeat: 2, repeatDelay: 1, yoyo: true, onComplete: animacionCompleta});
+    animacion = new TimelineMax({delay: 2, pause: false, repeat: 0, repeatDelay: 1, yoyo: true, onComplete: animacionCompleta});
 
     animacion.to(logo, 2, {
         left: 400
